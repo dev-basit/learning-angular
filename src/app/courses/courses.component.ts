@@ -35,6 +35,14 @@ export class CoursesComponent {
     console.log('angular event filtering feature');
   }
 
+  traditionallyHandleInput(event: any) {
+    console.log('Traditional way of getting input value ', event.target.value);
+  }
+
+  angularHandleInput(name: String) {
+    console.log('Angular way of getting input value ', name);
+  }
+
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
   }

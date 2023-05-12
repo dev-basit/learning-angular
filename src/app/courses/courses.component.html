@@ -16,7 +16,7 @@
   <button class="btn btn-primary" (click)="checkingEvent($event)">event</button>
 </section> -->
 
-<section>
+<!-- <section>
   <p>event filtering traditional way</p>
   <input type="text" (keyup)="traditionalEventFiltering($event)" />
 </section>
@@ -24,4 +24,17 @@
 <section>
   <p>Angular event filtering feature</p>
   <input type="text" (keyup.enter)="angularEventFiltering()" />
+</section> -->
+
+<section>
+  <h1>Template variables - 2 ways to get input field values</h1>
+  <section>
+    <p>Traditional way via event object</p>
+    <input type="text" (keyup)="traditionallyHandleInput($event)" />
+  </section>
+
+  <section>
+    <p>Angular way via #inputName</p>
+    <input type="text" #name (keyup)="angularHandleInput(name.value)" />
+  </section>
 </section>
