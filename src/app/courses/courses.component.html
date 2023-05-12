@@ -12,6 +12,6 @@
   </button>
 </section>
 
-<section [style.margin]="10">
+<section [style.margin]="10" (click)="affectedByEventBubbling($event)">
   <button class="btn btn-primary" (click)="checkingEvent($event)">event</button>
 </section>

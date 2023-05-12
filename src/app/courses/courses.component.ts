@@ -16,7 +16,12 @@ export class CoursesComponent {
   }
 
   checkingEvent(event: any) {
+    event.stopPropagation(); // this will stop event bubbling
     console.log('event is ', event);
+  }
+
+  affectedByEventBubbling(event: any) {
+    console.log('event bubbling occuring ', event);
   }
 
   constructor(service: CoursesService) {
