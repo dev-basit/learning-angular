@@ -26,7 +26,7 @@
   <input type="text" (keyup.enter)="angularEventFiltering()" />
 </section> -->
 
-<section>
+<!-- <section>
   <h1>Template variables - 2 ways to get input field values</h1>
   <section>
     <p>Traditional way via event object</p>
@@ -35,6 +35,22 @@
 
   <section>
     <p>Angular way via #inputName</p>
-    <input type="text" #name (keyup)="angularHandleInput(name.value)" />
+    <input type="text" #name (keyup.enter)="angularHandleInput(name.value)" />
+  </section>
+</section> -->
+
+<section>
+  <h1>1-way binding & 2-way binding</h1>
+  <section>
+    <p>One way binding</p>
+    <h4>Author name:</h4>
+    <input type="text" [value]="author" (keyup.enter)="oneWayBinding()" />
+  </section>
+
+  <!-- [(ngModel)]="author",  this is angular syntax for two way binding -->
+  <section>
+    <p>Two way binding</p>
+    <h4>Author name:</h4>
+    <input [(ngModel)]="author" (keyup.enter)="twoWayBinding()" />
   </section>
 </section>
