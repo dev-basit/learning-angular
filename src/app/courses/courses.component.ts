@@ -7,6 +7,7 @@ import { CoursesService } from '../courses.service';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent {
+  author = 'Basit';
   courses;
 
   constructor(service: CoursesService) {
