@@ -1,4 +1,4 @@
-<h1 [textContent]="author"></h1>
+<!-- <h1 [textContent]="author"></h1>
 <ul>
   <li *ngFor="let course of courses">{{ course }}</li>
 </ul>
@@ -14,4 +14,14 @@
 
 <section [style.margin]="10" (click)="affectedByEventBubbling($event)">
   <button class="btn btn-primary" (click)="checkingEvent($event)">event</button>
+</section> -->
+
+<section>
+  <p>event filtering traditional way</p>
+  <input type="text" (keyup)="traditionalEventFiltering($event)" />
+</section>
+
+<section>
+  <p>Angular event filtering feature</p>
+  <input type="text" (keyup.enter)="angularEventFiltering()" />
 </section>
