@@ -1,4 +1,4 @@
  <h1 [textContent]="author"></h1>
  <ul><li *ngFor="let course of courses">{{course}}</li></ul> `
 
- <button class="btn btn-primary">Save</button>
+ <button class="btn btn-primary"  [class.btn-success]="isActive">Save</button>
