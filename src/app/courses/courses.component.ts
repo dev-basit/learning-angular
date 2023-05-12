@@ -8,7 +8,7 @@ import { CoursesService } from '../courses.service';
 })
 export class CoursesComponent {
   author = 'Basit';
-  isActive = true;
+  isActive = false;
   courses;
 
   constructor(service: CoursesService) {
