@@ -39,7 +39,8 @@
   </section>
 </section> -->
 
-<section>
+<!-- [(ngModel)]="author",  this is angular syntax for two way binding -->
+<!-- <section>
   <h1>1-way binding & 2-way binding</h1>
   <section>
     <p>One way binding</p>
@@ -47,10 +48,30 @@
     <input type="text" [value]="author" (keyup.enter)="oneWayBinding()" />
   </section>
 
-  <!-- [(ngModel)]="author",  this is angular syntax for two way binding -->
   <section>
     <p>Two way binding</p>
     <h4>Author name:</h4>
     <input [(ngModel)]="author" (keyup.enter)="twoWayBinding()" />
   </section>
+</section> -->
+
+<section>
+  <h1>Pipes is used to format data</h1>
+  <p>
+    {{ subject.title | uppercase }}
+  </p>
+  <p>
+    {{ subject.students | number }}
+  </p>
+  <p>
+    {{ subject.price | currency : "PKR" : true : "1.2-4" }}
+  </p>
+  <p>
+    {{ subject.startingDate | date : "shortDate" }}
+  </p>
+
+  <p>
+    Custom pipes:
+    {{ subject.history | summary : 10 }}
+  </p>
 </section>
