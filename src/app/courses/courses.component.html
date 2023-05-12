@@ -1,4 +1,17 @@
- <h1 [textContent]="author"></h1>
- <ul><li *ngFor="let course of courses">{{course}}</li></ul> `
+<h1 [textContent]="author"></h1>
+<ul>
+  <li *ngFor="let course of courses">{{ course }}</li>
+</ul>
+`
+<section [style.margin]="10">
+  <button
+    [style.backgroundColor]="isActive ? 'blue' : 'white'"
+    (click)="onSave()"
+  >
+    Save
+  </button>
+</section>
 
- <button [style.backgroundColor]="isActive ? 'blue': 'white' ">Save</button>
+<section [style.margin]="10">
+  <button class="btn btn-primary" (click)="checkingEvent($event)">event</button>
+</section>

@@ -8,8 +8,16 @@ import { CoursesService } from '../courses.service';
 })
 export class CoursesComponent {
   author = 'Basit';
-  isActive = false;
+  isActive = true;
   courses;
+
+  onSave() {
+    console.log('button clicked');
+  }
+
+  checkingEvent(event: any) {
+    console.log('event is ', event);
+  }
 
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
