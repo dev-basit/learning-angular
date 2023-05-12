@@ -1,0 +1,8 @@
+<button type="button" class="btn btn-default btn-lg" (click)="changeIcon()">
+  <span
+    class="glyphicon"
+    [class.glyphicon-star]="iconIsActive"
+    [class.glyphicon-star-empty]="!iconIsActive"
+  ></span>
+  Star
+</button>
