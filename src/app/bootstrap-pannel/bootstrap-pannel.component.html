@@ -1,0 +1,13 @@
+<p>
+  // code comments: you dont need a css selector or select attribute, if you are
+  using one ng-content per file
+</p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <ng-content select=".heading"></ng-content>
+  </div>
+  <div class="panel-body">
+    <ng-content select=".body"></ng-content>
+  </div>
+</div>

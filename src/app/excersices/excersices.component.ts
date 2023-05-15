@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'excersices',
@@ -14,6 +14,8 @@ import { Component } from '@angular/core';
       Star
     </button>
   `,
+
+  // whichever style method comes last will be effective and used
   styleUrls: ['./excersices.component.scss'],
   styles: [
     `
@@ -22,7 +24,9 @@ import { Component } from '@angular/core';
       }
     `,
   ],
-  // whichever style method comes last will be effective and used
+
+  // apply shadowDom
+  encapsulation: ViewEncapsulation.Emulated,
 })
 export class ExcersicesComponent {
   iconIsActive: boolean = false;
