@@ -8,9 +8,16 @@ import { CoursesComponent } from './courses/courses.component';
 import { CoursesService } from './courses.service';
 import { SummaryPipe } from './summary.pipe';
 import { ExcersicesComponent } from './excersices/excersices.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
-  declarations: [AppComponent, CoursesComponent, SummaryPipe, ExcersicesComponent],
+  declarations: [
+    AppComponent,
+    CoursesComponent,
+    SummaryPipe,
+    ExcersicesComponent,
+    FavoriteComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [CoursesService],
   bootstrap: [AppComponent],
