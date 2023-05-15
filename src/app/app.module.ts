@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CoursesService } from './courses.service';
 import { SummaryPipe } from './summary.pipe';
-import { ExcersicesComponent } from './excersices/excersices.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { BootstrapPannelComponent } from './bootstrap-pannel/bootstrap-pannel.component';
+import { LikeComponent } from './exercises/like-component/like-component.component';
+import { ExcersicesComponent } from './exercises/excersices/excersices.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { BootstrapPannelComponent } from './bootstrap-pannel/bootstrap-pannel.co
     ExcersicesComponent,
     FavoriteComponent,
     BootstrapPannelComponent,
+    LikeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [CoursesService],

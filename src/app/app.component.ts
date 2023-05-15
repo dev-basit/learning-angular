@@ -13,7 +13,17 @@ export class AppComponent {
     isFavorite: true,
   };
 
+  tweet = {
+    isLiked: false,
+    likesCount: 105,
+  };
+
   onFavoriteChanged(eventArgs: FavoriteChangedEventArgs) {
     console.log('favorite changed', eventArgs);
+  }
+
+  changeCounter(isLiked: boolean) {
+    if (isLiked) this.tweet.likesCount++;
+    else this.tweet.likesCount--;
   }
 }

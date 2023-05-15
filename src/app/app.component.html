@@ -7,7 +7,7 @@
   (change)="onFavoriteChanged($event)"
 ></favorite> -->
 
-<bootstrap-pannel>
+<!-- <bootstrap-pannel>
   <ng-container class="heading">
     <h2>custom heading</h2>
     <p>custom header from host html file</p>
@@ -16,4 +16,10 @@
     <h2>custom body elements</h2>
     <p>custom body from host html file</p>
   </div>
-</bootstrap-pannel>
+</bootstrap-pannel> -->
+
+<like
+  [likesCount]="tweet.likesCount"
+  [isLiked]="tweet.isLiked"
+  (change)="changeCounter($event)"
+></like>
