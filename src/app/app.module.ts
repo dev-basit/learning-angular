@@ -13,6 +13,7 @@ import { LikeComponent } from './exercises/like-component/like-component.compone
 import { ExcersicesComponent } from './exercises/excersices/excersices.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { InputFormDirective } from './custom-directives/input-form.directive';
+import { ZippyDropdownComponent } from './exercises/zippy-dropdown/zippy-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { InputFormDirective } from './custom-directives/input-form.directive';
     LikeComponent,
     DirectivesComponent,
     InputFormDirective,
+    ZippyDropdownComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [CoursesService],

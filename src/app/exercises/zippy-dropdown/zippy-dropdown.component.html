@@ -1,0 +1,7 @@
+<div style="margin: 2rem auto; width: 20rem">
+  <div style="display: flex; justify-content: space-between">
+    <span [textContent]="title"></span>
+    <button (click)="isDropdown = !isDropdown">toggle</button>
+  </div>
+  <div *ngIf="isDropdown"><ng-content></ng-content></div>
+</div>
