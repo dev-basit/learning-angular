@@ -4,16 +4,14 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
   selector: '[appInputForm]',
 })
 export class InputFormDirective {
-  @Input() appInputFormat = 'lowercase';
+  @Input() appInputForm: string = 'lowercase';
 
-  constructor(private el: ElementRef) {
-    // console.log(el);
-  }
+  constructor(private el: ElementRef) {}
 
   @HostListener('blur') onBlur() {
     let value: string = this.el.nativeElement.value;
 
-    if (this.appInputFormat === 'lowercase')
+    if (this.appInputForm === 'lowercase')
       this.el.nativeElement.value = value.toLowerCase();
     else this.el.nativeElement.value = value.toUpperCase();
   }
