@@ -11,6 +11,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { BootstrapPannelComponent } from './bootstrap-pannel/bootstrap-pannel.component';
 import { LikeComponent } from './exercises/like-component/like-component.component';
 import { ExcersicesComponent } from './exercises/excersices/excersices.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ExcersicesComponent } from './exercises/excersices/excersices.component
     FavoriteComponent,
     BootstrapPannelComponent,
     LikeComponent,
+    DirectivesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [CoursesService],

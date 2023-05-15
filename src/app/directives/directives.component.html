@@ -1,0 +1,133 @@
+<!-- <h1>*ngIF structural directive</h1>
+
+<section>
+  <p>Method 1</p>
+  <div *ngIf="courses.length > 0">Availbale courses</div>
+  <div *ngIf="courses.length == 0">No course available</div>
+</section>
+
+<section>
+  <p>Method 2</p>
+  <div *ngIf="courses.length > 0; else noCourses">Availbale courses</div>
+  <ng-template #noCourses>No course available</ng-template>
+</section>
+
+<section>
+  <p>Method 2b</p>
+  <div *ngIf="courses.length > 0; then coursesList; else noCourses"></div>
+  <ng-template #coursesList>Available courses</ng-template>
+  <ng-template #noCourses>No course available</ng-template>
+</section>
+
+<section>
+  <p>Hiding element using underlying "hidden" property of dom object</p>
+  <div [hidden]="courses.length == 0">Available courses</div>
+  <div [hidden]="courses.length > 0">No course available</div>
+</section>
+
+<p>
+  using "*ngIf structural directive" element, if condition evaluates to false,
+  element is not loaded in html dom
+</p>
+<p>
+  while using [hidden], it is loaded but its visibility is set to hidden, so we
+  cannot see it
+</p>
+<p>
+  Note: For small element trees, use [hidden]. And for large use *ngIf only when
+  creating this tree is not costly
+</p> -->
+
+<!-- <h1>*ngSwitchCase structural and ngSwitch attribute directive</h1>
+
+<ul class="nav nav-pills">
+  <li [class.active]="viewMode == 'map'">
+    <a (click)="viewMode = 'map'">Map View</a>
+  </li>
+  <li [class.active]="viewMode == 'list'">
+    <a (click)="viewMode = 'list'">List View</a>
+  </li>
+</ul>
+
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">Map View Content</div>
+  <div *ngSwitchCase="'list'">List View Content</div>
+  <div *ngSwitchDefault>Default</div>
+</div> -->
+
+<!-- <h1>*ngFor structural directive</h1>
+<ul>
+  <li
+    *ngFor="let subject of subjects; even as isEven; index as i"
+    style="margin-bottom: 1rem"
+  >
+    <span>Index: {{ i }}</span>
+    <span> Id: {{ subject.id }} </span>
+    <span> Name: {{ subject.name }} </span>
+    <span *ngIf="isEven">(Even)</span>
+    <button (click)="removeSubject(i)">Remove</button>
+  </li>
+  <button (click)="onAdd()">Add</button>
+</ul>
+
+<ul style="margin-top: 10rem">
+  <p>
+    trackBy example, which optimizes the performance, it doesnt compare with
+    address in memory rather with condition u give
+  </p>
+  <li
+    *ngFor="let teacher of teachers; index as i; trackBy: trackTeacher"
+    style="margin-bottom: 1rem"
+  >
+    <span>Index: {{ i }}</span>
+    <span> Id: {{ teacher.id }} </span>
+    <span> Name: {{ teacher.name }} </span>
+  </li>
+  <button (click)="loadTeachers()">Laod teachers</button>
+</ul> -->
+
+<!-- 
+<h1>using class binding or without [ngClass] attribute directive</h1>
+
+<span
+  class="glyphicon"
+  [class.glyphicon-star]="isApplicable"
+  [class.glyphicon-star-empty]="!isApplicable"
+  (click)="updateIsApplicable()"
+>
+</span>
+
+<h1>[ngClass] attribute directive - used to add classNames to DOM elements</h1>
+<p>above class naming alternative via ngClass</p>
+<span
+  class="glyphicon"
+  [ngClass]="{
+    'glyphicon-star':isApplicable,
+    'glyphicon-star-empty':!isApplicable,
+    
+}"
+  (click)="updateIsApplicable()"
+>
+</span> -->
+
+<h1>using style binding or without [ngStyle] attribute directive</h1>
+
+<button
+  [style.backgroundColor]="canSave ? 'green' : 'red'"
+  [style.color]="canSave ? 'white' : 'black'"
+  [style.fontWeight]="canSave ? 'bold' : 'normal'"
+>
+  Save
+</button>
+
+<h1>[ngStyle] attribute directive - used to add styles to DOM elements</h1>
+<p>style binding alternative via ngStyle</p>
+<button
+  [ngStyle]="{
+    backgroundColor: canSave ? 'green' : 'red',
+    color: canSave ? 'white' : 'black',
+    fontWeight: canSave ? 'bold' : 'white',
+  }"
+>
+  Save
+</button>
