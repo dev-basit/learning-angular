@@ -14,6 +14,7 @@ import { ExcersicesComponent } from './exercises/excersices/excersices.component
 import { DirectivesComponent } from './directives/directives.component';
 import { InputFormDirective } from './custom-directives/input-form.directive';
 import { ZippyDropdownComponent } from './exercises/zippy-dropdown/zippy-dropdown.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ZippyDropdownComponent } from './exercises/zippy-dropdown/zippy-dropdow
     DirectivesComponent,
     InputFormDirective,
     ZippyDropdownComponent,
+    ContactFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [CoursesService],
