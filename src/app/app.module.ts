@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { InputFormDirective } from './custom-directives/input-form.directive';
 import { ZippyDropdownComponent } from './exercises/zippy-dropdown/zippy-dropdown.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,9 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     InputFormDirective,
     ZippyDropdownComponent,
     ContactFormComponent,
+    SignupFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [CoursesService],
   bootstrap: [AppComponent],
 })

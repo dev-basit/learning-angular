@@ -18,8 +18,8 @@
         class="alert alert-danger"
         *ngIf="firstName.touched && !firstName.valid"
       >
-        <div *ngIf="firstName.control.errors">minlength</div>
-        <div *ngIf="firstName.control.errors">required</div>
+        <div *ngIf="firstName.hasError('required')">required error</div>
+        <div *ngIf="firstName.hasError('minlength')">min length error</div>
       </div>
     </div>
   </div>
